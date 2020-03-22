@@ -1,0 +1,27 @@
+{
+  "name": "al-siraj-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ant-design/icons": "^4.0.2",
+    "@zeit/next-css": "^1.0.1",
+    "antd": "^3.26.12",
+    "axios": "^0.19.2",
+    "downloadjs": "^1.4.7",
+    "formik": "^2.1.4",
+    "next": "^9.2.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-highlight-words": "^0.16.0",
+    "styled-components": "^5.0.1"
+  }
+}

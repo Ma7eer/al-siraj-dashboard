@@ -1,0 +1,33 @@
+#__next
+  > div
+  > section
+  > main
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div
+  > table
+  > thead
+  > tr
+  > th:nth-child(1) {
+  text-align: center !important;
+}
+
+#__next
+  > div
+  > section
+  > main
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div
+  > table
+  > thead
+  > tr
+  > th:nth-child(2) {
+  text-align: center !important;
+}

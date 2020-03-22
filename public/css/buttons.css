@@ -1,0 +1,37 @@
+/* using id to make it more specific and not force using !important */
+
+#btn-custom-green {
+  background-color: #389e0d;
+  /* background-color: #52c41a; */
+  border-color: #389e0d;
+
+  font-weight: bold;
+
+  margin-left: 10px;
+}
+
+#btn-custom-green:hover {
+  background-color: #52c41a;
+  border-color: #52c41a;
+}
+
+#btn-custom-blue {
+  font-weight: bold;
+
+  margin-left: 10px;
+}
+
+#btn-custom-yellow {
+  background-color: #d4b106;
+  border-color: #d4b106;
+
+  font-weight: bold;
+
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#btn-custom-yellow:hover {
+  background-color: #fadb14;
+  border-color: #fadb14;
+}
