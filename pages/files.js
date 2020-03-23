@@ -1,17 +1,17 @@
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import Axios from "axios";
+import download from "downloadjs";
+
 import { Layout, Table, Button, message } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 
 const { Header, Content, Footer } = Layout;
 
-import { useState, useEffect } from "react";
-import Axios from "axios";
-import download from "downloadjs";
+import API_BASE_URL from "../api/url";
 
 import "antd/dist/antd.css";
 import "../public/css/table.css";
-
-const url = "http://localhost:3001";
 
 const Files = () => {
   const [file, setFile] = useState(null);
@@ -24,7 +24,7 @@ const Files = () => {
     await setLoading(true);
     let res = await Axios({
       method: "GET",
-      url: `${url}/documents/${applicantCivilNumber}`
+      url: `${API_BASE_URL}/documents/${applicantCivilNumber}`
     });
 
     if (res.status === 200) {
@@ -67,7 +67,7 @@ const Files = () => {
                 e.preventDefault();
                 const res2 = await Axios({
                   method: "get",
-                  url: `${url}/documents/${applicantCivilNumber}/${text}`,
+                  url: `${API_BASE_URL}/documents/${applicantCivilNumber}/${text}`,
                   responseType: "blob"
                 });
                 const blob = await new Blob([res2.data]);
@@ -96,7 +96,7 @@ const Files = () => {
                 if (await confirm("هل تريد مسح الملف؟")) {
                   let res = await Axios({
                     method: "delete",
-                    url: `${url}/documents/${applicantCivilNumber}/${text.fileName}`
+                    url: `${API_BASE_URL}/documents/${applicantCivilNumber}/${text.fileName}`
                   });
                   if (res.status === 200) {
                     await fetchData();
@@ -149,7 +149,7 @@ const Files = () => {
 
                 let res = await Axios({
                   method: "post",
-                  url: `${url}/documents/${applicantCivilNumber}`,
+                  url: `${API_BASE_URL}/documents/${applicantCivilNumber}`,
                   data: data
                 });
 

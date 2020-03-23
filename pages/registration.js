@@ -4,6 +4,8 @@ import { Layout, message, Modal } from "antd";
 
 const { Footer } = Layout;
 
+import API_BASE_URL from "../api/url";
+
 import Form from "../components/Forms/RegistrationForm";
 import Table from "../components/Tables/RegistrationTable";
 import NavigationBar from "../components/LayoutElements/NavigationBar";
@@ -45,7 +47,7 @@ const Registration = () => {
       // fetch data
       let res = await Axios({
         method: "GET",
-        url: "http://localhost:3001"
+        url: API_BASE_URL
       });
 
       // if we get a 200 response
@@ -111,7 +113,7 @@ const Registration = () => {
       };
 
       if (mode === "DEFAULT") {
-        let res = await Axios.post("http://localhost:3001", formattedData);
+        let res = await Axios.post(API_BASE_URL, formattedData);
         if (res.status === 200) {
           setTableData(prevState => [...prevState, values]);
           message.success("تم اضافة حالة جديدة");
@@ -120,7 +122,7 @@ const Registration = () => {
         // get one based on civil id
         let res = await Axios({
           method: "GET",
-          url: `http://localhost:3001/${values.applicantCivilNumber}`
+          url: `${API_BASE_URL}/${values.applicantCivilNumber}`
         });
 
         if (res.status === 200) {
@@ -143,7 +145,7 @@ const Registration = () => {
 
           let res2 = await Axios({
             method: "PATCH",
-            url: `http://localhost:3001/${res.data.applicant[0]._id}`,
+            url: `${API_BASE_URL}/${res.data.applicant[0]._id}`,
             data: formattedEditData
           });
 
@@ -183,7 +185,7 @@ const Registration = () => {
     try {
       let res = await Axios({
         method: "DELETE",
-        url: `http://localhost:3001/${rowValues.applicantCivilNumber}`
+        url: `${API_BASE_URL}/${rowValues.applicantCivilNumber}`
       });
       if (res.status === 200) {
         await setLoading(true);
