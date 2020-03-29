@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import { Layout, message, Modal } from "antd";
+import * as Yup from "yup";
 
 const { Footer } = Layout;
 
@@ -15,7 +16,7 @@ import TableButtonBar from "../components/TableElements/TableButtonsBar";
 import "antd/dist/antd.css";
 
 const manifest = {
-  data: {
+  dataSchema: {
     applicationId: "",
     applicantName: "",
     applicantCivilNumber: "",
@@ -29,11 +30,17 @@ const manifest = {
     // electronics: false,
     // education: false,
     // socialSupport: false
-  }
+  },
+  validationSchema: Yup.object().shape({
+    applicantCivilNumber: Yup.string().required("ادخل البيانات في الخانة")
+  })
 };
 
 const Registration = () => {
-  const [formData, setFormData] = useState(manifest.data);
+  const [formData, setFormData] = useState(manifest.dataSchema);
+  const [formValidation, setFormValidation] = useState(
+    manifest.validationSchema
+  );
   const [tableData, setTableData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [visible, setVisible] = useState(false);
@@ -238,7 +245,11 @@ const Registration = () => {
           afterClose={() => setMode("DEFAULT")}
           destroyOnClose={true}
         >
-          <Form formData={formData} handleSubmit={handleSubmit} />
+          <Form
+            formData={formData}
+            formValidation={formValidation}
+            handleSubmit={handleSubmit}
+          />
         </Modal>
         <Table
           data={tableData}

@@ -1,0 +1,12 @@
+.stage-img {
+  padding: 50px;
+  transition: transform 0.2s; /* Animation */
+}
+
+.dashboard-card:hover .stage-img {
+  transform: scale(1.5);
+}
+
+.meta {
+  color: red !important;
+}

@@ -15,6 +15,9 @@ const TextInput = ({ formik, englishValue, arabicValue }) => {
         onChange={formik.handleChange}
         value={formik.values[englishValue]}
       />
+      {formik.errors[englishValue] && formik.touched[englishValue] ? (
+        <div style={{ color: "red" }}>'{formik.errors[englishValue]}'</div>
+      ) : null}
     </>
   );
 };

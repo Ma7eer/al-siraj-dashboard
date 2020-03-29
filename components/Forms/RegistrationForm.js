@@ -11,13 +11,14 @@ import CheckboxInput from "../FormElements/CheckboxInput";
 
 import "../../public/css/form.css";
 
-const RegistrationForm = ({ formData, handleSubmit }) => {
+const RegistrationForm = ({ formData, formValidation, handleSubmit }) => {
   const formik = useFormik({
     initialValues: formData,
     onSubmit: (values, { resetForm }) => {
       handleSubmit(values);
       resetForm({});
-    }
+    },
+    validationSchema: formValidation
   });
 
   return (
