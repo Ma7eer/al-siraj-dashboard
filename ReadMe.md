@@ -47,3 +47,7 @@ Note that the application works best when the backend application is running. Th
 ### Registration Page 
 
 ![Registration Page](https://github.com/Ma7eer/al-siraj-dashboard/blob/master/public/images/registration-page.gif)
+
+### Files Manager Page 
+
+![Files Manager Page](https://github.com/Ma7eer/al-siraj-dashboard/blob/master/public/images/files-page.gif)
