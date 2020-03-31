@@ -43,3 +43,7 @@ Note that the application works best when the backend application is running. Th
 ### Dashboard Page 
 
 ![Dashboard Page](https://github.com/Ma7eer/al-siraj-dashboard/blob/master/public/images/dashboard-page.gif)
+
+### Registration Page 
+
+![Registration Page](https://github.com/Ma7eer/al-siraj-dashboard/blob/master/public/images/registration-page.gif)
