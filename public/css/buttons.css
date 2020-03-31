@@ -1,11 +1,13 @@
 /* using id to make it more specific and not force using !important */
 
 #btn-custom-green {
+  text-align: center;
+
   background-color: #389e0d;
   /* background-color: #52c41a; */
   border-color: #389e0d;
 
-  font-weight: bold;
+  /* font-weight: bold; */
 
   margin-left: 10px;
 }
@@ -16,16 +18,20 @@
 }
 
 #btn-custom-blue {
-  font-weight: bold;
+  text-align: center;
+
+  /* font-weight: bold; */
 
   margin-left: 10px;
 }
 
 #btn-custom-yellow {
+  text-align: center;
+
   background-color: #d4b106;
   border-color: #d4b106;
 
-  font-weight: bold;
+  /* font-weight: bold; */
 
   margin-left: 10px;
   margin-right: 10px;

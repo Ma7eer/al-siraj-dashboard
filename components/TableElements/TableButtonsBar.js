@@ -17,18 +17,24 @@ const TableButtonBar = ({ showModal }) => {
         // size="small"
         type="primary"
         id="btn-custom-green"
+        title="جديد"
       >
-        <PlusSquareFilled style={{ marginLeft: "4px" }} />
-        <span>جديد</span>
+        <PlusSquareFilled
+        // style={{ marginLeft: "4px" }}
+        />
+        {/* <span>جديد</span> */}
       </Button>
       <Button
         onClick={showModal}
         // size="small"
         type="primary"
         id="btn-custom-blue"
+        title="طباعة"
       >
-        <PrinterFilled style={{ marginLeft: "4px" }} />
-        <span>طباعة</span>
+        <PrinterFilled
+        // style={{ marginLeft: "4px" }}
+        />
+        {/* <span>طباعة</span> */}
       </Button>
     </div>
   );
