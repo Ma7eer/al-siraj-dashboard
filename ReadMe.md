@@ -33,3 +33,13 @@ npm run dev
 Find the page at https://localhost:3000
 
 Note that the application works best when the backend application is running. This application relies on the api to retrieve data.
+
+## Showcase
+
+### Login Page 
+
+![Login Page](https://github.com/Ma7eer/al-siraj-dashboard/blob/master/public/images/login-page.gif)
+
+### Dashboard Page 
+
+![Dashboard Page](https://github.com/Ma7eer/al-siraj-dashboard/blob/master/public/images/dashboard-page.gif)
