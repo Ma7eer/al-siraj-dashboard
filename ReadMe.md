@@ -39,3 +39,7 @@ Note that the application works best when the backend application is running. Th
 ### Login Page 
 
 ![Login Page](https://github.com/Ma7eer/al-siraj-dashboard/blob/master/public/images/login-page.gif)
+
+### Dashboard Page 
+
+![Dashboard Page](https://github.com/Ma7eer/al-siraj-dashboard/blob/master/public/images/dashboard-page.gif)
