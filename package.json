@@ -15,7 +15,7 @@
     "@ant-design/icons": "^4.0.2",
     "@zeit/next-css": "^1.0.1",
     "antd": "^3.26.12",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "downloadjs": "^1.4.7",
     "formik": "^2.1.4",
     "next": "^9.2.2",
